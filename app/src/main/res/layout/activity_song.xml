@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--노래 정보-->
+
+    <ImageButton
+        android:id="@+id/song_setting_ib"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        android:src="@drawable/btn_player_setting"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/song_eq_ib"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_player_eq_off"
+        app:layout_constraintBottom_toBottomOf="@+id/song_setting_ib"
+        app:layout_constraintStart_toEndOf="@+id/song_setting_ib"
+        app:layout_constraintTop_toTopOf="@id/song_setting_ib"/>
+
+    <ImageButton
+        android:id="@+id/song_down_ib"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitXY"
+        android:background="@color/white"
+        android:src="@drawable/nugu_btn_down"
+        app:layout_constraintBottom_toBottomOf="@id/song_eq_ib"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/song_eq_ib"/>
+
+    <ImageButton
+        android:id="@+id/song_more_ib"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_player_more"
+        app:layout_constraintEnd_toEndOf="@id/song_down_ib"
+        app:layout_constraintStart_toStartOf="@id/song_down_ib"
+        app:layout_constraintTop_toBottomOf="@id/song_down_ib"/>
+
+    <TextView
+        android:id="@+id/song_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_more_ib" />
+
+    <TextView
+        android:id="@+id/singer_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가수"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_title_tv" />
+
+    <ImageView
+        android:id="@+id/singer_more_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/btn_arrow_more"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@id/singer_name_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/singer_name_tv"
+        app:layout_constraintStart_toEndOf="@id/singer_name_tv"/>
+    
+    <ImageView
+        android:id="@+id/song_album_iv"
+        android:layout_width="270dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_album_exp2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singer_more_iv"/>
+
+    <TextView
+        android:id="@+id/song_lyrics1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="나리는 꽃가루에"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/song_album_iv"
+        app:layout_constraintEnd_toEndOf="@+id/song_album_iv"
+        app:layout_constraintTop_toBottomOf="@+id/song_album_iv"/>
+
+    <TextView
+        android:id="@+id/song_lyrics2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="눈이 따끔해 아야"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/song_lyrics1_tv"
+        app:layout_constraintEnd_toEndOf="@+id/song_lyrics1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/song_lyrics1_tv"/>
+
+    <!--like/unlike 이미지 레이아웃-->
+    <LinearLayout
+        android:id="@+id/song_like_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/song_lyrics2_tv"
+        app:layout_constraintEnd_toEndOf="@+id/song_lyrics2_tv"
+        app:layout_constraintTop_toBottomOf="@+id/song_lyrics2_tv">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/song_like_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_my_like_off"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/song_like_iv2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_my_like_on"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/song_unlike_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/btn_player_unlike_off"
+        android:layout_marginStart="60dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/song_unlike_iv2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/btn_player_unlike_on"
+                android:layout_marginStart="60dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/song_progress_sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@color/transparent"
+        android:max="100000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_like_layout" />
+
+    <TextView
+        android:id="@+id/song_start_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:08"
+        android:textColor="@color/purple_500"
+        app:layout_constraintStart_toStartOf="@+id/song_progress_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb"/>
+
+    <TextView
+        android:id="@+id/song_end_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:37"
+        android:textColor="@color/gray_color"
+        app:layout_constraintEnd_toEndOf="@+id/song_progress_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb"/>
+
+    <!--이전/재생/다음 이미지 레이아웃-->
+    <LinearLayout
+        android:id="@+id/play_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb">
+
+        <ImageView
+            android:id="@+id/song_previous_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/btn_miniplayer_previous"/>
+
+        <ImageView
+            android:id="@+id/song_miniplayer_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_miniplayer_play"/>
+
+        <ImageView
+            android:id="@+id/song_pause_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_miniplay_mvpause"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/song_next_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/btn_miniplayer_next"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/song_repeat_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/nugu_btn_repeat_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/play_layout"
+        app:layout_constraintEnd_toStartOf="@+id/play_layout"
+        app:layout_constraintTop_toTopOf="@+id/play_layout"/>
+
+    <ImageView
+        android:id="@+id/song_repeat_iv2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/btn_player_repeat_on_light"
+        app:layout_constraintBottom_toBottomOf="@+id/play_layout"
+        app:layout_constraintEnd_toStartOf="@+id/play_layout"
+        app:layout_constraintTop_toTopOf="@+id/play_layout"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/song_repeat_iv3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/btn_player_repeat_on1_light"
+        app:layout_constraintBottom_toBottomOf="@+id/play_layout"
+        app:layout_constraintEnd_toStartOf="@+id/play_layout"
+        app:layout_constraintTop_toTopOf="@+id/play_layout"
+        android:visibility="invisible"/>
+
+
+    <ImageView
+        android:id="@+id/song_shuffle_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/nugu_btn_random_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/play_layout"
+        app:layout_constraintStart_toEndOf="@+id/play_layout"
+        app:layout_constraintTop_toTopOf="@+id/play_layout"/>
+
+    <ImageView
+        android:id="@+id/song_shuffle_iv2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/btn_player_random_on_light"
+        app:layout_constraintBottom_toBottomOf="@+id/play_layout"
+        app:layout_constraintStart_toEndOf="@+id/play_layout"
+        app:layout_constraintTop_toTopOf="@+id/play_layout"
+        android:visibility="invisible" />
+
+
+    <ImageView
+        android:id="@+id/instagram_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/btn_actionbar_instagram"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/song_list_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/btn_player_go_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/song_related_iv"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/btn_player_related"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/song_list_iv"
+        app:layout_constraintStart_toEndOf="@id/instagram_iv"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

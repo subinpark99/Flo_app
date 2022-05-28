@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보관함"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/locker_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="18sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="#3F3FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/locker_tb"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:tabIndicatorColor="#3f3fff"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="#00ff0000"
+        app:tabSelectedTextColor="#3f3fff"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/checkall_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/btn_playlist_select_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locker_tb"/>
+
+    <TextView
+        android:id="@+id/checkall_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="전체선택"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkall_iv"
+        app:layout_constraintStart_toEndOf="@id/checkall_iv"
+        app:layout_constraintTop_toTopOf="@+id/checkall_iv" />
+
+    <ImageView
+        android:id="@+id/playall_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_browse_arrow_right"
+        app:layout_constraintStart_toEndOf="@id/checkall_tv"
+        app:layout_constraintTop_toTopOf="@+id/checkall_iv" />
+
+    <TextView
+        android:id="@+id/playall_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="전체듣기"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/playall_iv"
+        app:layout_constraintStart_toEndOf="@id/playall_iv"
+        app:layout_constraintTop_toTopOf="@+id/playall_iv" />
+
+    <TextView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="편집"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/playall_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playall_tv" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/locker_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

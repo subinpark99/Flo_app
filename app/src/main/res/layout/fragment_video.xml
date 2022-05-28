@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+ <ImageView
+     android:id="@+id/video_iv"
+     android:layout_width="match_parent"
+     android:layout_height="180dp"
+     android:src="@drawable/mv"
+     android:scaleType="fitXY"
+     android:layout_marginTop="20dp"
+     android:layout_marginEnd="20dp"
+     android:layout_marginStart="20dp"
+     android:layout_marginBottom="20dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+
+ <TextView
+     android:id="@+id/mv_name"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="[MV] 버퍼링 (Glitch Mode)"
+     android:layout_marginTop="8dp"
+     android:textColor="@color/black"
+     android:textSize="15sp"
+     app:layout_constraintTop_toBottomOf="@id/video_iv"
+     app:layout_constraintStart_toStartOf="@id/video_iv"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="NCT DREAM | 2022.03.28"
+     android:layout_marginTop="5dp"
+     android:textSize="13sp"
+     app:layout_constraintTop_toBottomOf="@id/mv_name"
+     app:layout_constraintStart_toStartOf="@id/mv_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
