@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--홈 화면 배경-->
+
     <ImageView
         android:id="@+id/home_pannel_background_iv"
         android:layout_width="match_parent"
@@ -14,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <!--centerCrop: ImageView의 크기에 이미지를 맞춰줌-->
-
 
     <TextView
         android:id="@+id/home_pannel_title_tv"

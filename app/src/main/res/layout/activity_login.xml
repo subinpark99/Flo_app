@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--로그인 화면-->
+
     <ImageView
         android:id="@+id/login_close_iv"
         android:layout_width="30dp"
@@ -29,13 +31,14 @@
         android:id="@+id/login_id_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
         android:hint="아이디 (이메일)"
         android:inputType="text"
+        android:minHeight="48dp"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/login_next_tv"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_flo_logo_iv" />
 
     <TextView
@@ -57,11 +60,12 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="20dp"
         android:hint="직접입력"
+        android:minHeight="48dp"
         android:textSize="17sp"
-        app:layout_constraintStart_toEndOf="@+id/login_next_tv"
-        app:layout_constraintTop_toTopOf="@+id/login_id_et"
         app:layout_constraintBottom_toBottomOf="@+id/login_id_et"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_next_tv"
+        app:layout_constraintTop_toTopOf="@+id/login_id_et" />
 
 
     <ImageView
@@ -82,11 +86,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:hint="비밀번호"
-        android:textSize="17sp"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/login_arrow_iv"
+        android:minHeight="48dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_arrow_iv" />
 
     <TextView
         android:id="@+id/login_email_error_tv"
@@ -113,17 +118,17 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_login_btn"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
+        android:background="#3F3FFF"
         android:text="로그인"
         android:textColor="@color/white"
         android:textSize="17sp"
-        android:background="#3F3FFF"
-        app:layout_constraintTop_toBottomOf="@+id/login_password_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_et" />
 
     <TextView
         android:id="@+id/login_findid_tv"

@@ -18,17 +18,18 @@
             android:exported="true"
             android:theme="@style/SplashTheme">
 
-            <intent-filter>
+            <intent-filter>  //어떤 기능을 할 지 정리, 앱을 키자 마자 나오는 화면
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".ui.song.SongActivity"
+            android:name=".SongActivity"
             android:exported="true"/>
-        <activity android:name=".ui.login.LoginActivity"></activity>
-        <activity android:name=".ui.signup.SignUpActivity"></activity>
+
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

@@ -9,39 +9,39 @@
 
     <ImageButton
         android:id="@+id/song_setting_ib"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="35dp"
         android:background="@color/white"
-        android:src="@drawable/btn_player_setting"
         android:scaleType="fitXY"
+        android:src="@drawable/btn_player_setting"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/song_eq_ib"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="10dp"
         android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@drawable/btn_player_eq_off"
         app:layout_constraintBottom_toBottomOf="@+id/song_setting_ib"
         app:layout_constraintStart_toEndOf="@+id/song_setting_ib"
-        app:layout_constraintTop_toTopOf="@id/song_setting_ib"/>
+        app:layout_constraintTop_toTopOf="@id/song_setting_ib" />
 
     <ImageButton
         android:id="@+id/song_down_ib"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="15dp"
-        android:scaleType="fitXY"
         android:background="@color/white"
+        android:scaleType="fitXY"
         android:src="@drawable/nugu_btn_down"
         app:layout_constraintBottom_toBottomOf="@id/song_eq_ib"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/song_eq_ib"/>
+        app:layout_constraintTop_toTopOf="@id/song_eq_ib" />
 
     <ImageButton
         android:id="@+id/song_more_ib"

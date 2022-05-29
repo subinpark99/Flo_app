@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+  <!--앨범의 수록곡 탭 화면-->
 
   <LinearLayout
       android:id="@+id/layout"

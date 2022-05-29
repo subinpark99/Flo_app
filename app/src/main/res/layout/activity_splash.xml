@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--접속하면 보이는 화면-->
     <ImageView
         android:layout_width="190dp"
         android:layout_height="90dp"

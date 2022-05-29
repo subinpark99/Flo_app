@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+ <!---앨범의 영상 탭 화면-->
 
  <ImageView
      android:id="@+id/video_iv"

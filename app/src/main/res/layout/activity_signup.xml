@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--회원가입 화면-->
+
     <TextView
         android:id="@+id/signup_tv"
         android:layout_width="wrap_content"
@@ -25,6 +27,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="5dp"
         android:hint="아이디(이메일)"
+        android:minHeight="48dp"
         android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/signup_tv"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,11 +51,12 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="20dp"
         android:hint="직접입력"
+        android:minHeight="48dp"
         android:textSize="17sp"
-        app:layout_constraintStart_toEndOf="@+id/signup_next_tv"
-        app:layout_constraintTop_toTopOf="@+id/signup_id_et"
         app:layout_constraintBottom_toBottomOf="@+id/signup_id_et"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signup_next_tv"
+        app:layout_constraintTop_toTopOf="@+id/signup_id_et" />
 
     <TextView
         android:id="@+id/signup_email_error_tv"
@@ -86,6 +90,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="20dp"
         android:hint="이름"
+        android:minHeight="48dp"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,8 +104,9 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="20dp"
         android:hint="비밀번호"
-        android:textSize="17sp"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_name_et" />
@@ -123,8 +129,9 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="20dp"
         android:hint="비밀번호 확인"
-        android:textSize="17sp"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_password_et" />

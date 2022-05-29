@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--보관함/ 저장한 곡의 리사이클러뷰-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/saved_today_music_album_rv"
         android:layout_width="match_parent"

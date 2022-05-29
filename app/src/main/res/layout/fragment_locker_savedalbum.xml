@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--보관함/ 저장 앨범의 리사이클러 뷰-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/savedalbum_today_music_album_rv"
         android:layout_width="match_parent"

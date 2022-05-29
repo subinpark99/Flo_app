@@ -6,14 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.flo.data.entities.Album
-import com.example.flo.data.entities.Song
 import com.example.flo.databinding.ActivityMainBinding
-import com.example.flo.ui.home.HomeFragment
-import com.example.flo.ui.locker.LockerFragment
-import com.example.flo.ui.look.LookFragment
-import com.example.flo.ui.song.SongActivity
-import com.example.flo.ui.song.SongDatabase
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
@@ -46,9 +39,9 @@ class MainActivity : AppCompatActivity() {
             editor.putInt("songId",song.id)
             editor.apply()
 
-           val intent=Intent(this, SongActivity::class.java)
+           val intent=Intent(this, SongActivity::class.java)  //메인 액티비티에서 song 액티비티로 화면 전환
             startActivity(intent)
-        } //메인 액티비티에서 song 액티비티로 화면 전환
+        }
 
 
         initBottomNavigation()
@@ -181,7 +174,7 @@ class MainActivity : AppCompatActivity() {
                 "Feel My Rhythm",
                 "Red Velvet",
                 0,
-                240,
+                210,
                 false,
                 "music_feelmyrhythm",
                 R.drawable.feeltherhythm,
@@ -195,7 +188,7 @@ class MainActivity : AppCompatActivity() {
                 "Lilac",
                 "IU",
                 0,
-                240,
+                214,
                 false,
                 "music_lilac",
                 R.drawable.img_album_exp2,
@@ -209,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                 "Weekend",
                 "Taeyeon",
                 0,
-                240,
+                233,
                 false,
                 "music_weekend",
                 R.drawable.img_album_exp6,
@@ -223,7 +216,7 @@ class MainActivity : AppCompatActivity() {
                 "Starlight",
                 "TAEIL",
                 0,
-                240,
+                225,
                 false,
                 "music_starlight",
                 R.drawable.starlight,
@@ -237,7 +230,7 @@ class MainActivity : AppCompatActivity() {
                 "Buffering",
                 "NCT DREAM",
                 0,
-                240,
+                207,
                 false,
                 "music_buffering",
                 R.drawable.buffering,

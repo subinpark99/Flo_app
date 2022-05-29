@@ -6,6 +6,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp">
 
+        <!--오늘 발매 음악에 들어갈 아이템-->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/item_album_cover_img_cardView"
             android:layout_width="150dp"

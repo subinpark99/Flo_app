@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--보관함의 저장앨범에 들어갈 아이템-->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/itemlocker_cover_img_cv"
         android:layout_width="100dp"
